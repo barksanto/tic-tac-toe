@@ -12,7 +12,17 @@ const one = document.querySelector('.one'),
 // add each box into array
 const boxes = [one, two, three, four, five, six, seven, eight, nine];
 // add onclick listener for each box
-const selectBox = (event) => event.target.innerHTML = 'clicked!!!'
-boxes.map((element) => element.addEventListener('click', selectBox))
+let firstPlayer = true;
+
+const selectBox = (event) => {
+  if (firstPlayer) {
+    event.target.innerHTML = '🐶';
+  } else {
+    event.target.innerHTML = '🐱';
+  }
+  return firstPlayer = !firstPlayer
+}
+
+boxes.map((element) => element.addEventListener('click', selectBox));
 
 
