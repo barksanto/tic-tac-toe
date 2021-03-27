@@ -9,6 +9,10 @@ const one = document.querySelector('.one'),
   eight = document.querySelector('.eight'),
   nine = document.querySelector('.nine');
 
-
+// add each box into array
+const boxes = [one, two, three, four, five, six, seven, eight, nine];
+// add onclick listener for each box
+const selectBox = (event) => event.target.innerHTML = 'clicked!!!'
+boxes.map((element) => element.addEventListener('click', selectBox))
 
 
