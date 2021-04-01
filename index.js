@@ -15,6 +15,7 @@ function handleClick(event) {
   const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS;
   // place the mark
   placeMark(cell, currentClass);
+  circleTurn = !circleTurn
   //check for win
 
   //check for draw
