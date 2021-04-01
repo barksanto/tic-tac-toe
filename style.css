@@ -7,11 +7,11 @@
   --mark-size: cal(var(--cell) *.9);
 }
 
-body{
+body {
   margin: 0;
 }
 
-.board{
+.board {
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -22,9 +22,30 @@ body{
   align-items: center;
 }
 
-.cell{
+.cell {
   width:var(--cell-size);
   height: var(--cell-size);
-  background-color: black;
-  border: 1px solid white;
+  background-color: white;
+  border: 1px solid black;
 }
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+  border-right: none;
+}
+
+.cell:nth-child(9),
+.cell:nth-child(8),
+.cell:nth-child(7) {
+  border-bottom: none;
+}
+
